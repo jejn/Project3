@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
-<!-- HTML document / Introduction to Programming / Stage 1 -->
+<!-- HTML document / Introduction to Programming -->
 <head>
+  <!-- Google Fonts for 'Droid Sans'-->
+  <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
   <meta charset="utf-8"/>
   <title>The Introduction to Programming Project</title>
   <link rel="Stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <a id="top"></a>
   <div class="headline">
     <h1>NOTES: INTRODUCTION TO PROGRAMMING [A UDACITY NANODEGREE]</h1>
   </div>
+  <a id="top"></a>
   <div class="lesson-box">
     <div class="lesson-box-title"><h2>Stage 0: The Basics</h2></div>
     <div class="lesson-box-content">
@@ -69,7 +71,7 @@
     <div class="lesson-box-content">
       <h3>Structure</h3>
       <p>
-        HTML and CSS <em>(<u>C</u>ascading <u>S</u>tyle <u>S</u>heets)</em> are two Languages that work together to bring structure and style, respectively, to a website <em>(JavaScript brings the action)</em>. HTML is structured with tags through something called <a href="http://en.wikipedia.org/wiki/Document_Object_Model">DOM</a> <em>(Document Object Model)</em>.
+        HTML and CSS <em>(<u>C</u>ascading <u>S</u>tyle <u>S</u>heets)</em> are two Languages that work together to bring structure and style, respectively, to a website (JavaScript brings the action). HTML is structured with tags through something called <a href="http://en.wikipedia.org/wiki/Document_Object_Model">DOM</a> <em>(Document Object Model)</em>.
       </p>
       <p>
         The structure of HTML is much like a family tree, where elements branches out into more elements and form relations. Parent elements can have child elements and so on. These relations have significance as to how rules are <u>inherited</u> throughout the structure.
@@ -86,7 +88,7 @@
         Inheritance is one of the key features of CSS. In general, text properties are inherited from parent elements while box elements are not.
       </p>
       <p>
-        In CSS you work with <em>Selectors</em> and <em>Declarations</em>. <em>Declarations</em> are broken down into <em>Properties</em> and <em>Values</em>: <code>selector { property: value; }</code>.
+        In CSS you work with <em>Selectors</em> and <em>Declarations</em>. <em>Declarations</em> are broken down into <em>Properties</em> and <em>Values</em> : <code>selector { property: value; }</code>.
       </p>
       <p>
         There are many different types of <em>Selectors</em> you can work with in CSS. A good explanation of how they work and what they do can be found <a href="https://css-tricks.com/how-css-selectors-work/">here</a>. However, one important function of CSS is that you can precisely specify which <em>HTML element(s)</em>, rules are applied to depending on which type of <em>Selector</em> you use.
@@ -106,7 +108,7 @@
         Everything that a computer executes is done through a program. A program is an instruction with a set of rules that the computer can understand and follow, written in a <em>programming language</em>.
       </p>
       <p>
-        The reason we don't use a natural language in programming, is that there's generally too much <em>ambiguity</em> regarding the meaning of a word or a sentence. Also, a natural language tend to be very verbose - requiring a lot of words to describe something.  
+        The reason we don't use a natural language in programming, is that there's generally too much <em>ambiguity</em> regarding the meaning of a word or a sentence. Also, a natural language tend to be very verbose.  
       </p>
       <p>
         The <em>Backus-Naur Form <a href="http://en.wikipedia.org/wiki/Backus%E2%80%93Naur_Form">(BNF)</a></em> is a notation technique to describe the language so that the rules of interpretation are unambiguous. By using this method for programming languages, the programmer and computer can communicate in an equitable way  as well as making sure that the computer understands and executes the code correctly. BNF is like grammar in a natural language. It's a set of rules to describe how we apply and interpret the language.   
@@ -185,6 +187,59 @@
         <a href="#top">Back to Top</a>
       </p>
     </div>
+  </div>
+  <div class="lesson-box">
+    <div class="lesson-box-title"><h2>Stage 3: Object Oriented Programming (OOP)</h2></div>
+    <div class="lesson-box-content">
+      <h3>Class vs. Object</h3>
+      <p>
+        The first and most important concept to understand in OOP is the distinction and relationship between <em>Class</em> and <em>Object</em>. In Python however, everything is an <em>Object</em>: <em>Classes, Instances, Variables, Lists, Integers, Strings</em> etc. This can be a bit confusing as OOP makes a distinction between <em>Class</em> and <em>Object</em>. It's not a problem though as long as you understand that the reference to an <em>Object</em>, in this context, refers to an <em>Object</em> as an <em>Instance of a Class</em> - something concrete, while <em>Class</em> is something abstract. A <em>Class</em> is a template that contains information specifying what attributes and behavior an <em>Object</em> created from that template will have. <em>Class</em> is the abstract - the idea, and an <em>Instance</em> is an <em>Object</em> of that idea.      
+      </p>
+      <hr>
+      <h3>Structure</h3>
+      <p>
+        Within classes, variables are referred to as <em>Attributes</em> or <em>Properties</em> and functions as <em>Methods</em>. The data is said to be <em>Encapsulated</em> within the class which is one of the fundamentals of OOP. The classes in turn will be grouped in files referred to as <em>Modules</em>. <em>Modules</em> can be imported into other modules by adding <code>import</code> and the file name without <code>.py</code> as long as the modules are in the same directory. Once a module has been imported, its classes are accessible to construct instances of that class. In Python there are also built-in <em>Modules</em> in the <em>Python Standard Library</em>. These are imported in the same way.    
+      </p>
+      <p>
+        Within a Class the Attributes can be divided into <em>Class Attributes</em> and <em>Instance Attributes</em> (also referred to as Properties). <em>Class Attributes</em> are placed immediately after the class name and the value will be the same for all instances of that class. Next comes the <em>Constructor</em> that initializes the object or instance. This is done through the <code>__init__</code> method, where the <em>Instance Attributes</em> are placed. These attributes are what defines the instance when created. For example <code>class Person(Human):</code> might have a constructor <code>self.__init__(self, name, age, gender)</code> and the <em>Instance Attributes</em> <code>self.name = name</code>, <code>self.age = age</code> and <code>self.gender = gender</code>. Unlike <em>Class Attributes</em>, <em>Instance Attributes</em> are unique to each <em>Instance</em>. 
+       </p>
+      <hr>
+      <h3>Inheritance</h3>
+      <p>
+        Another fundamental of OOP is <em>inheritance</em>. Just as in HTML and CSS, properties will be inherited depending on the relationships. In OOP classes will inherit <em>Properties</em> and <em>Methods</em> from it's ancestors. <code>class Machine(object)</code> is a parent of <code>class Vehicle(Machine)</code> is a parent of <code>class Car(Vehicle)</code> because <code>Car</code> is-a-type-of <code>Vehicle</code> is-a-type-of <code>Machine</code> is-a-type-of <code>(object)</code>. <code>class Car(Vehicle)</code> would have a number of properties defining what an instance of <code>Car</code> would be like. For example there could be a <code>self.engine</code> property. Engine could itself be a class but it wouldn't inherit from <code>class Car(Vehicle)</code> as engine <em>is-<u>not</u>-a-type-of</em> car. We would define the <code>Car</code> - <code>Engine</code> relationship as a <em>has-a</em> relationship. 
+      </p>
+      <p>
+        In the <code>class Machine(object)</code> <code>class Vehicle(Machine)</code> <code>class Car(Vehicle)</code> chain, <code>Vehicle</code> inherits <em>Properties</em> and <em>Methods</em> from <code>Machine</code>, and <code>Car</code> inherits from both ancestors. So if there is a method defined in the class <code>Machine</code> then that method will behave the same in all sub-classes. If the same method were to be defined differently in <code>Vehicle</code> then that would override the method in <code>Machine</code> and behave according to the new definition for <code>Vehicle</code> and its sub-classes. This is called <em>method override</em>.  
+      </p>
+      <hr>
+      <h3>Concept</h3>
+      <p>
+        Just as with classes in CSS, classes in Python can be used to store data that you want to be able to access multiple times and therefore eliminate repetition. A Module works much like a CSS-file that you reference in a HTML document where you can then reuse the code you've written in CSS over and over again.
+      </P>
+      <p>
+        OOP is also useful to create structure and order to programs. As we are able to encapsulate data in classes and group classes in modules, we get a better organization of the code and it's also easier for multiple developers to understand and work together on a project.  
+      </p>
+      <p>
+        The idea in OOP is that everything is grouped and organized in a relevant way. Modules, Classes and Objects are separated for structure but at the same time accessible for flexibility and function.    
+      </p>
+    </div>
+    <div class="lesson-box-bottom">
+      <p>
+        <a href="#top">Back to Top</a>
+      </p>
+    </div>
   </div>  
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
